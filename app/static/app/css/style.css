@@ -8,6 +8,13 @@
     background-color: black;
     color: white;
 }
+#list-item-hover a:hover{
+    background-color: black;
+    color:white;
+}
+.list-group-item {
+    color: black;
+}
 .owl-next{
  float:right;
 }
