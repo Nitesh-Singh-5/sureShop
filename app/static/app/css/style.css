@@ -1,0 +1,34 @@
+.owl-carousel .item{
+ /* border: 1px solid black; */
+ font-size: 24px;
+ text-align: center;
+ margin-top: 20px;;
+}
+.dropdown-menu .dropdown-item:hover{
+    background-color: black;
+    color: white;
+}
+.owl-next{
+ float:right;
+}
+.owl-prev{
+ float:left;
+}
+.owl-prev span{
+ font-size: 24px;
+ font-weight: bold;
+}
+.owl-next span{
+ font-size: 24px;
+ font-weight: bold;
+}
+.product_title{
+    font-size: 20px;
+    color: black;
+    font-weight: 600;
+}
+.product_price{
+    font-size: 16px;
+    color: rgb(56, 51, 51);
+    font-weight: 500;
+}
