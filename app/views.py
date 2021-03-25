@@ -151,7 +151,7 @@ def laptop(request,data=None):
     totalitem=0
     if data==None:
         laptops=Product.objects.filter(category='L')
-    elif data=='Asus' or data=='Acer':
+    elif data=='Asus' or data=='Acer' or data == 'Lenovo' or data == 'Hp':
         laptops=Product.objects.filter(category='L').filter(brand=data)
     elif data=='below':
         laptops=Product.objects.filter(category='L').filter(discounted_price__lt=50000)
