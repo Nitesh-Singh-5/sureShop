@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@1,300&family=Open+Sans&display=swap');
+
 .owl-carousel .item{
  /* border: 1px solid black; */
  font-size: 24px;
@@ -38,4 +41,27 @@
     font-size: 16px;
     color: rgb(56, 51, 51);
     font-weight: 500;
+}
+#slider1 a:hover{
+	background: #fff;
+	text-decoration: none;
+	box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
+}
+#slider2 a:hover{
+	background: #fff;
+	text-decoration: none;
+	box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
+}
+#slider3 a:hover{
+	background: #fff;
+	text-decoration: none;
+	box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
+}
+#slider4 a:hover{
+	background: #fff;
+	text-decoration: none;
+	box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
+}
+.sureShop_product{
+	font-family: 'Open Sans', sans-serif;
 }
