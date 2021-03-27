@@ -115,7 +115,18 @@
  </div>
  <!-- End 3rd Product Slider -->
 
-
+<!-- 4th Product Slider -->
+<div class="mx-3">
+  <h2 class="sureShop_product">sureShop Bottom Wears</h2>
+  <!-- Slider 3 -->
+  <div class="owl-carousel" id="slider4">
+   {% for l in bottomwears %}
+     <a href="{% url 'product-detail' l.id %}" class="btn sureShop_price"><div class="item"><img src="{{l.product_image.url}}" alt="" height="200px"><span class="fw-normal text-dark">{{l.title}}</span><br><span class="fs-5 text-secondary
+     ">Rs. {{l.discounted_price}}</span></div></a>
+   {% endfor %}
+  </div>
+ </div>
+ <!-- End 4th Product Slider -->
  
 {% endblock main-content %}
 
