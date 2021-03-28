@@ -23,7 +23,7 @@ $('#slider1, #slider2, #slider3, #slider4').owlCarousel({
 })
 
 let type = new Typed("#typed", {
-    strings: ["<br>Developers", "<br>Designers"],
+    strings: ["{{request.user.first_name}}", "{{request.user.last_name}}"],
     typeSpeed: 80,
     backSpeed: 80,
     loop: true,
