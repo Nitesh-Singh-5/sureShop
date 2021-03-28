@@ -4,7 +4,7 @@
 {% block main-content %}
 <div class="container my-5">
   <div class="row">
-    <h3>Welcome <span class="text-capitalize">{{request.user}}</span></h3>
+    <h3>Welcome <span class="text-capitalize">{{request.user.first_name}} {{request.user.last_name}}</span></h3>
     <div class="col-sm-2 border-end">
       <ul class="list-unstyled">
         <li class="d-grid"><a href="{% url 'profile' %}" class="btn {{active}}">Profile</a></li>
