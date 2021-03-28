@@ -21,3 +21,12 @@ $('#slider1, #slider2, #slider3, #slider4').owlCarousel({
         }
     }
 })
+
+let type = new Typed("#typed", {
+    strings: ["<br>Developers", "<br>Designers"],
+    typeSpeed: 80,
+    backSpeed: 80,
+    loop: true,
+
+
+})
