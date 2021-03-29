@@ -105,5 +105,21 @@
     <script src="{% static 'app/js/owl.carousel.min.js' %}"></script>
     <script src="{% static 'app/js/all.min.js' %}"></script>
     <script src="{% static 'app/js/myscript.js' %}"></script>
+    <script>
+
+    let fn = '{{request.user.first_name}} {{request.user.last_name}}'
+    {% comment %} let ln = '' {% endcomment %}
+
+    console.log(fn)
+    let type = new Typed("#typed", {
+        strings: [fn],
+        typeSpeed: 80,
+        loop: true,
+        backDelay: 500,
+        backSpeed: 30,
+
+})
+</script>
+
   </body>
 </html>

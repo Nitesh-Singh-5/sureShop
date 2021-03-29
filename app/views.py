@@ -131,7 +131,6 @@ def mobile(request,data=None):
     totalitem=0
     if data==None:
         mobiles=Product.objects.filter(category='M')
-        active = "bg-dark text-white"
     elif data=='Redmi':
         mobiles=Product.objects.filter(category='M').filter(brand=data)
     elif data =='Honor':
@@ -146,7 +145,7 @@ def mobile(request,data=None):
         mobiles=Product.objects.filter(category='M').filter(discounted_price__gt=10000)
     if request.user.is_authenticated:
         totalitem=len(Cart.objects.filter(user=request.user))
-    return render(request, 'app/mobile.html',{'mobiles':mobiles,'active':active,'totalitem':totalitem})
+    return render(request, 'app/mobile.html',{'mobiles':mobiles,'totalitem':totalitem})
 
 def laptop(request,data=None):
     totalitem=0
