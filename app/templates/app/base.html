@@ -61,7 +61,11 @@
             {% if request.user.is_authenticated %}
            <li class="nav-item dropdown mx-2">
               <a class="nav-link dropdown-toggle text-white" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                {% if request.user.first_name %}
                 {{request.user.first_name|capfirst}}
+                {% else %}
+                {{request.user.username}}
+                {% endif %}
               </a>
               <ul class="dropdown-menu" aria-labelledby="profileDropdown">
                 <li><a class="dropdown-item" href="{% url 'profile' %}">Profile</a></li>

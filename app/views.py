@@ -52,7 +52,7 @@ def show_cart(request):
         totalitem=len(Cart.objects.filter(user=request.user))
         return render(request,'app/addtocart.html',{'carts':cart,'totalamount':totalamount,'amount':amount,'totalitem':totalitem})
     else:
-        return render(request,'app/emptycart.html',{'totalitem':totalitem})
+        return render(request,'app/emptycart.html')
 
 def plus_cart(request):
     if request.method=='GET':
