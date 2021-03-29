@@ -2,6 +2,9 @@
 {% load static %}
 {% block title %}Login{% endblock title %}
 {% block main-content %}
+
+{% if not request.user.is_authenticated %}
+
 <div class="container">
     <div class="row my-3">
         <div class="col-sm-6 offset-sm-3">
@@ -29,4 +32,9 @@
         </div>
     </div>
 </div>
+{% else %}
+
+    You're not allowed here
+
+{% endif %}
 {% endblock main-content %}

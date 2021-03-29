@@ -110,9 +110,13 @@
     <script src="{% static 'app/js/all.min.js' %}"></script>
     <script src="{% static 'app/js/myscript.js' %}"></script>
     <script>
-
-    let fn = '{{request.user.first_name}} {{request.user.last_name}}'
-    {% comment %} let ln = '' {% endcomment %}
+    {% if request.user.first_name %}
+      let fn = '{{request.user.first_name}} {{request.user.last_name}}'
+    {% else %}
+      let fn = '{{request.user.username}}'
+    {% endif %}
+    {% comment %} let fn = '{{request.user.first_name}} {{request.user.last_name}}'
+     {% endcomment %}
 
     console.log(fn)
     let type = new Typed("#typed", {

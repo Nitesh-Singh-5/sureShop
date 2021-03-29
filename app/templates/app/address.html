@@ -13,6 +13,7 @@
   </div>
   <div class="col-sm-9 offset-sm-1">
    <div class="row">
+   {% if add %}
     {% for ad in add %}
     <div class="col-sm-6">
      <div class="card">
@@ -27,6 +28,12 @@
      </div>
     </div>
     {% endfor %}
+   {% else %}
+     
+     <h4><a href="{% url 'profile' %}" style="text-decoration:none">create address</a></h4>
+
+   {% endif %}
+    
    </div>
   </div>
  </div>
