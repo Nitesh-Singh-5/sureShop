@@ -17,19 +17,7 @@
   </div>
   <div class="col-sm-8">
       <div class="row">
-          {% for product in mobiles %}
-          <div class="col-sm-4 text-center mb-4">
-              <a href="{% url 'product-detail' product.id %}" class="btn">
-                  <div class="item">
-                      <img src="{{product.product_image.url}}" alt="" height="300">
-                      <div class="fw-bold">{{product.title}}</div>
-                      <div class="fw-bold">Rs. {{product.discounted_price}}
-                        <small class="fw-light text-decoration-line-through">{{product.selling_price}}</small>
-                      </div>
-                  </div>
-              </a>
-          </div>
-          {% endfor %}
+          
       </div>
   </div>
  </div>
