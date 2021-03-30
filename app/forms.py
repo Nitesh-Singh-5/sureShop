@@ -56,5 +56,5 @@ class AddProductForm(forms.ModelForm):
             'description':forms.TextInput(attrs={'class':'form-control'}),
             'brand':forms.TextInput(attrs={'class':'form-control'}),
             'category':forms.Select(attrs={'class':'form-control'}),
-            'product_image':forms.ImageField(attrs={'class':'form-control'}),
+           
             }
