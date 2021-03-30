@@ -7,6 +7,7 @@ from django.contrib import messages
 from django.db.models import Q
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
+from django.views.generic import CreateView
 
 class ProductView(View):
     def get(self,request):
@@ -250,3 +251,8 @@ class ProfileView(View):
             messages.success(request,'Congratulations!! Profile Updated Successfully')
             totalitem=len(Cart.objects.filter(user=request.user))
         return render(request,'app/profile.html',{'form':form,'active':'btn-primary','totalitem':totalitem})
+
+class AdminAddProductView(CreateView):
+    model = Product
+    template_name = 'app/add_product.html'
+    fields = '__all__'

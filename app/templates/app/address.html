@@ -2,9 +2,10 @@
 {% load static %}
 {% block title %}Address{% endblock title %}
 {% block main-content %}
+
 <div class="container my-5">
  <div class="row">
- <h3>Welcome <span class="text-capitalize">{{request.user}}</span></h3>
+ <h3>Welcome <span class="text-capitalize" id="typed"></span></h3>
   <div class="col-sm-2 border-end">
    <ul class="list-unstyled">
     <li class="d-grid"><a href="{% url 'profile' %}" class="btn">Profile</a></li>

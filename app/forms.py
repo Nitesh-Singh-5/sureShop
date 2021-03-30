@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from django.forms import fields, widgets
 from django.utils.translation import gettext,gettext_lazy as _
 from django.contrib.auth import password_validation
-from .models import Customer
+from .models import Customer,Product
 
 class CustomerRegistrationForm(UserCreationForm):
     password1=forms.CharField(label='Password',widget=forms.PasswordInput(attrs={'class':'form-control'}))
@@ -43,4 +43,18 @@ class CustomerProfileForm(forms.ModelForm):
             'city':forms.TextInput(attrs={'class':'form-control'}),
             'state':forms.Select(attrs={'class':'form-control'}),
             'zipcode':forms.NumberInput(attrs={'class':'form-control'})
+            }
+
+class AddProductForm(forms.ModelForm):
+    class Meta:
+        model = Product
+        fields=['title','selling_price','discounted_price','description','brand','category','product_image']
+        widgets={
+            'title':forms.TextInput(attrs={'class':'form-control'}),
+            'selling_price':forms.NumberInput(attrs={'class':'form-control'}),
+            'discounted_price':forms.NumberInput(attrs={'class':'form-control'}),
+            'description':forms.TextInput(attrs={'class':'form-control'}),
+            'brand':forms.TextInput(attrs={'class':'form-control'}),
+            'category':forms.Select(attrs={'class':'form-control'}),
+            'product_image':forms.ImageField(attrs={'class':'form-control'}),
             }
