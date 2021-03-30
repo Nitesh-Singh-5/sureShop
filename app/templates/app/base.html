@@ -77,9 +77,11 @@
             <li class="nav-item mx-2">
              <a href="{% url 'showcart' %}" class="nav-link text-white"><span class="badge bg-danger">{{totalitem}}</span> Cart </a>
             </li>
-            <li class="nav-item mx-2">
-             <a class="dropdown-item" href="{% url 'add_product' %}">add_product</a>
-            </li>
+            {% if user.is_staff %}
+                <li class="nav-item mx-2">
+                 <a class="nav-link text-white" href="{% url 'add_product' %}">Add Product</a>
+                </li>
+            {% endif %}
             
             {% else %}
             <li class="nav-item mx-2">
