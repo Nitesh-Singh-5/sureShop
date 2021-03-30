@@ -2,7 +2,7 @@ from django.http import JsonResponse
 from django.shortcuts import render,redirect
 from django.views import View
 from .models import Customer,Product,Cart,OrderPlaced
-from .forms import CustomerRegistrationForm,CustomerProfileForm
+from .forms import CustomerRegistrationForm,CustomerProfileForm,AddProductForm
 from django.contrib import messages
 from django.db.models import Q
 from django.contrib.auth.decorators import login_required
@@ -254,5 +254,6 @@ class ProfileView(View):
 
 class AdminAddProductView(CreateView):
     model = Product
+    form_class = AddProductForm
     template_name = 'app/add_product.html'
-    fields = '__all__'
+    # fields = '__all__'

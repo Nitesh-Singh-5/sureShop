@@ -2,10 +2,12 @@
 
 {% block main-content %}
 
-{% if user.is_authenticated %}
+{% if user.is_staff %}
 
-<h2>Add Post...</h2><br>
-<div class="form-group">
+<div class="container">
+ <div class="row"></div>
+<h2>Add Product...</h2><hr><br>
+<div class="form-group col-xl-9">
 <form action="" method="POST" enctype="multipart/form-data">
 {% csrf_token %}
 {{form.media}}
@@ -13,13 +15,9 @@
 <input value="Post" type="submit" class="btn btn-secondary">
 </form>
 </div>
+</div>
 
-<script>
-   var name = "{{ user.id }}"
-   document.getElementById("elder").value
-      = name;
 
-</script>
 
 {% else %}
    

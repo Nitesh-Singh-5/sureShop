@@ -53,7 +53,7 @@ class AddProductForm(forms.ModelForm):
             'title':forms.TextInput(attrs={'class':'form-control'}),
             'selling_price':forms.NumberInput(attrs={'class':'form-control'}),
             'discounted_price':forms.NumberInput(attrs={'class':'form-control'}),
-            'description':forms.TextInput(attrs={'class':'form-control'}),
+            'description':forms.Textarea(attrs={'class':'form-control'}),
             'brand':forms.TextInput(attrs={'class':'form-control'}),
             'category':forms.Select(attrs={'class':'form-control'}),
            
