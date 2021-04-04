@@ -5,7 +5,15 @@
 <div class="container my-5">
  <div class="row">
   <div class="col-sm-3">
-   
+    <div class="list-group" id="list-item-hover">
+        <a href="{% url 'mobile' %}" class="list-group-item list-group-item-action" aria-current="true">All Mobile</a>
+        <a href="{% url 'mobiledata' 'Redmi' %}" class="list-group-item list-group-item-action" aria-current="true">Redmi</a>
+        <a href="{% url 'mobiledata' 'Samsung' %}" class="list-group-item list-group-item-action" aria-current="true">Samsung</a>
+        <a href="{% url 'mobiledata' 'Realme' %}" class="list-group-item list-group-item-action" aria-current="true">Realme</a>
+        <a href="{% url 'mobiledata' 'Honor' %}" class="list-group-item list-group-item-action" aria-current="true">Honor</a>
+        <a href="{% url 'mobiledata' 'below' %}" class="list-group-item list-group-item-action" aria-current="true">Below 10000</a>
+        <a href="{% url 'mobiledata' 'above' %}" class="list-group-item list-group-item-action" aria-current="true">Above 10000</a>
+    </div>
   </div>
   <div class="col-sm-8">
       <div class="row">
