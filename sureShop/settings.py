@@ -25,7 +25,7 @@ SECRET_KEY = 'huev)+ogb=@c@pn@jk_*x+nk#7b_+qa75wtzbh5dr-!es0)^ew'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS =  ['127.0.0.1']
+ALLOWED_HOSTS =  ['127.0.0.1','sureshop.herokuapp.com']
 
 
 # Application definition
